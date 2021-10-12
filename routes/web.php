@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/hello', function () {
+    echo('Hello World');
+});
+Route::get('/name/{name}',function ($name){
+    return "hello" . $name;
+});
+Route::get('/name/{name}',function ($name){
+    return "hello" . $name;
+})->where('name','[A-Za-z]+');
